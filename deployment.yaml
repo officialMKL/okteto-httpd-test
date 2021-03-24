@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: okteto-httpd-test
+  labels:
+    app.kubernetes.io/name: okteto-httpd-test
+spec:
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: okteto-httpd-test
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: okteto-httpd-test
+    spec:
+      containers:
+        - name: okteto-httpd-test
+          image: officialmkl/okteto-httpd-test:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: POSTER_SERVER_URL
+              value: ''
