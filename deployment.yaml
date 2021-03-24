@@ -20,7 +20,7 @@ spec:
         - name: okteto-httpd-test
           image: officialmkl/okteto-httpd-test:latest
           ports:
-            - containerPort: 8080
+            - containerPort: 80
           env:
             - name: POSTER_SERVER_URL
               value: ''
