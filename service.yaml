@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: okteto-httpd-test
+  labels:
+    app.kubernetes.io/name: okteto-httpd-test
+spec:
+  selector:
+    app.kubernetes.io/name: okteto-httpd-test
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080

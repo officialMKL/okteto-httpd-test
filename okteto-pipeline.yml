@@ -1,3 +1,5 @@
 icon: https://apps.okteto.com/movies/icon.png
 deploy:
   - kubectl apply -f deployment.yaml
+  - kubectl apply -f service.yaml
+  - kubectl apply -f ingress.yaml
