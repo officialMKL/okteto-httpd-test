@@ -4,7 +4,8 @@ metadata:
   name: okteto-httpd-test
 spec:
   rules:
-    - http:
+    - host: 'okteto-httpd-test.officialmkl.cloud.okteto.net'
+      http:
         paths:
           - path: '/'
             backend:
