@@ -1,4 +1,7 @@
 icon: https://apps.okteto.com/movies/icon.png
+build:
+  okteto-httpd-test:
+    context: .
 deploy:
   - kubectl apply -f deployment.yaml
   - kubectl apply -f service.yaml
