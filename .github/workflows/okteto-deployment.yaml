@@ -1,0 +1,25 @@
+name: Okteto Deployment
+on:
+  push:
+    branches:
+      - gh-actions
+jobs:
+  okteto-deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@master
+      - name: context
+        uses: okteto/context@latest
+        with:
+          token: ${{ secrets.OKTETO_TOKEN }}
+      - name: 'Activate Namespace'
+        uses: okteto/namespace@latest
+        with:
+          name: officialmkl
+      - name: "Build"
+      uses: okteto/build@latest
+      - name: 'Trigger the pipeline'
+        uses: okteto/pipeline@latest
+        with:
+          filename: okteto-pipline.yml

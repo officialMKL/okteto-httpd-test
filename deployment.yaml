@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: okteto-httpd-test
-          image: officialmkl/okteto-httpd-test:latest
+          image: okteto.dev/okteto-httpd-test:okteto
           ports:
             - containerPort: 80
           env:
