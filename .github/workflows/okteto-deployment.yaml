@@ -14,7 +14,7 @@ jobs:
       - name: 'Activate Namespace'
         uses: okteto/namespace@latest
         with:
-          name: officialmkl
+          namespace: officialmkl
       - name: 'Build'
         uses: okteto/build@latest
       - name: 'Trigger the pipeline'
