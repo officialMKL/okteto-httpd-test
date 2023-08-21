@@ -1,8 +1,6 @@
 name: Okteto Deployment
-on:
-  push:
-    branches:
-      - gh-actions
+run-name: ${{ github.actor }} is testing out Okteto Deployments via GitHub Actions 🚀
+on: [push]
 jobs:
   okteto-deployment:
     runs-on: ubuntu-latest
