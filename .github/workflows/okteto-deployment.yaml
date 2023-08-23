@@ -19,6 +19,7 @@ jobs:
         uses: okteto/build@latest
         with:
           tag: okteto-httpd-test:okteto
+          global: true
       - name: 'Trigger the pipeline'
         uses: okteto/pipeline@latest
         with:
