@@ -18,8 +18,7 @@ jobs:
       - name: 'Build'
         uses: okteto/build@latest
         with:
-          tag: okteto-httpd-test:okteto
-          global: true
+          file: okteto-pipeline.yml
       - name: 'Trigger the pipeline'
         uses: okteto/pipeline@latest
         with:
