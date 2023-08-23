@@ -15,10 +15,6 @@ jobs:
         uses: okteto/namespace@latest
         with:
           namespace: officialmkl
-      - name: 'Build'
-        uses: okteto/build@latest
-        with:
-          file: okteto-pipeline.yml
       - name: 'Trigger the pipeline'
         uses: okteto/pipeline@latest
         with:
